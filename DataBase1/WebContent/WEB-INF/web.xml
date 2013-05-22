@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>DataBase1</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>saveRems</display-name>
+    <servlet-name>saveRems</servlet-name>
+    <servlet-class>DataBase1.database2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>saveRems</servlet-name>
+    <url-pattern>/saveRems</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>saveData</display-name>
+    <servlet-name>saveData</servlet-name>
+    <servlet-class>ModifyTable.ModifyTable</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>saveData</servlet-name>
+    <url-pattern>/saveData</url-pattern>
+  </servlet-mapping>
+  <error-page>
+    <exception-type>java.lang.Throwable</exception-type>
+    <location>/404main.jsp</location>
+  </error-page>
+  <servlet>
+    <description></description>
+    <display-name>viewdataweekSummaryCharts</display-name>
+    <servlet-name>viewdataweekSummaryCharts</servlet-name>
+    <servlet-class>chart.viewdataSummaryCharts</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>viewdataweekSummaryCharts</servlet-name>
+    <url-pattern>/viewdataweekSummaryCharts</url-pattern>
+  </servlet-mapping>
+</web-app>
