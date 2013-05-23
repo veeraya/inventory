@@ -140,6 +140,7 @@ function getStats()
 {
 <%
 	String orders="";
+database2.startExec();
 table Tablenull = database2.values;
 out.println("");
 ArrayList<String> stats = database2.getStatistics();
@@ -1271,7 +1272,8 @@ if(Tablenull==null)
 
 if(ModifyTable.isSorted==-1)
 	database2.sortTable();
-table Table1 = database1.values;
+database1.startExec(); // added this in
+table Table1 = database1.values; //null pointer here!!
 ReadRemarks.getTable();
 
 int rsize1 = Table1.getRows();

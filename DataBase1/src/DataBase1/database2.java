@@ -408,7 +408,7 @@ public class database2 extends HttpServlet {
     			        +" left join dcs1p010.lofpjt10 d on jtorno=Wuworn "
 
     			        //+" where tlschd >'2012-04-01'"
-    			        +" where tlschd between current date - 30 days and current date + 60 days"
+    			        +" where tlschd is not null and tlschd != '' and tlschd between current date - 30 days and current date + 60 days"
     			        +" and tlmfgn !='ADOPTED'"
     			        +" and (tlidss in ('0000') or tlidss like '#%')"
     			        +" and tlmfgn in "
@@ -434,7 +434,7 @@ public class database2 extends HttpServlet {
         +" left join dcs1p010.lofpjt10 d on jtorno=Wuworn "
 
         //+" where tlschd >'2012-04-01'"
-        +" where tlschd between current date - 60 days and current date + 60 days"
+        +" where tlschd is not null and tlschd != '' and tlschd between current date - 60 days and current date + 60 days"
         +" and tlmfgn !='ADOPTED'"
         +" and (tlidss in ('0000') or tlidss like '#%')"
         +" and tlmfgn in "
@@ -461,7 +461,9 @@ public class database2 extends HttpServlet {
     			        +" left join mfs2p010a.FCSPOR10 c on tlmfgn=ormfgn "
     			        +" left join dcs1p010.lofpjt10 d on jtorno=Wuworn "
 
-    			        +" where tlschd between current date - 30 days and current date + 60 days"
+    			        //+" where tlschd between current date - 30 days and current date + 60 days"
+    			        //+" where tlschd between current date - 15 days and current date + 15 days"
+    			        +" where tlschd is not null and tlschd != '' and  tlschd between current date - 30 days and current date + 60 days"
     			        +" and tlmfgn !='ADOPTED'"
     			        +" and (tlidss in ('0000') or tlidss like '#%') and tlidss=oridss "
     			        +"order by Mfg#, Order#,Status";

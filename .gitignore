@@ -1,0 +1,7 @@
+#Eclipse
+.settings/
+.project
+.classpath
+.metadata/
+DataBase1/build/
+DataBase1/WebContent/build
